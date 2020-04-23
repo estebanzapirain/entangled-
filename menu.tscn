@@ -26,7 +26,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=3]
-resource_name = "aliceWalk"
+resource_name = "bobWalk"
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Bob:frame")
@@ -38,7 +38,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5, 1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ 1, 3, 0 ]
+"values": [ 0, 3, 3 ]
 }
 
 [node name="Control" type="Control"]
@@ -107,7 +107,7 @@ texture = ExtResource( 2 )
 flip_h = true
 vframes = 4
 hframes = 4
-frame = 1
+frame = 3
 
 [node name="aliceLbl" type="Label" parent="."]
 margin_left = 38.0
@@ -133,4 +133,4 @@ __meta__ = {
 anims/aliceWalk = SubResource( 2 )
 
 [node name="bobAnimPlayer" type="AnimationPlayer" parent="."]
-anims/aliceWalk = SubResource( 3 )
+anims/bobWalk = SubResource( 3 )
