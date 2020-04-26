@@ -134,3 +134,4 @@ anims/aliceWalk = SubResource( 2 )
 
 [node name="bobAnimPlayer" type="AnimationPlayer" parent="."]
 anims/bobWalk = SubResource( 3 )
+[connection signal="pressed" from="Panel/VBoxContainer/nuevoBtn" to="." method="_on_nuevoBtn_pressed"]

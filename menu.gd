@@ -14,3 +14,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 	# $aliceAnimPlayer.play("aliceWalk")
+
+
+func _on_nuevoBtn_pressed():
+	get_tree().change_scene("intro.tscn")
