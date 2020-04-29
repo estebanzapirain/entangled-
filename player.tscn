@@ -4,7 +4,7 @@
 [ext_resource path="res://player.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 3.71902, 4.66605 )
+extents = Vector2( 3.01642, 3.35482 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "Idle"
@@ -36,7 +36,7 @@ tracks/0/keys = {
 "values": [ 0, 3, 0 ]
 }
 
-[node name="Player" type="Node2D"]
+[node name="Alice" type="Node2D"]
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 script = ExtResource( 2 )
@@ -46,7 +46,7 @@ position = Vector2( 24.6988, 28.2938 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="KinematicBody2D"]
-position = Vector2( 24.7978, 26.3727 )
+position = Vector2( 24.9675, 26.8252 )
 texture = ExtResource( 1 )
 vframes = 4
 hframes = 4
@@ -56,6 +56,6 @@ anims/Idle = SubResource( 2 )
 anims/Walk = SubResource( 3 )
 
 [node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
-position = Vector2( 25.0245, 28.2022 )
+position = Vector2( 24.7417, 28.2022 )
 current = true
 zoom = Vector2( 0.2, 0.2 )
