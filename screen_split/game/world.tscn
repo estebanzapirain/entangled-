@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://screen_split/game/wall.gd" type="Script" id=1]
+[ext_resource path="res://screen_split/player/player.tscn" type="PackedScene" id=2]
+
+[node name="world" type="Node2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color( 0.333333, 0.65098, 0.866667, 1 )
+polygon = PoolVector2Array( -928, 800, 2240, 800, 2240, -736, -928, -736 )
+
+[node name="floor" type="StaticBody2D" parent="."]
+position = Vector2( 512, 576 )
+script = ExtResource( 1 )
+
+[node name="collision" type="CollisionPolygon2D" parent="floor"]
+polygon = PoolVector2Array( -1600, -1472, 1888, -1472, 1888, 448, -1600, 448, -1600, -1280, -1408, -1280, -1408, 192, 1696, 192, 1696, -1280, -1408, -1280, -1600, -1280 )
+
+[node name="polygon" type="Polygon2D" parent="floor"]
+color = Color( 0, 0, 0, 1 )
+
+[node name="player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1952, 416 )
+
+[node name="player2" parent="." instance=ExtResource( 2 )]
+position = Vector2( -800, -448 )
+
+[node name="wall" type="StaticBody2D" parent="."]
+script = ExtResource( 1 )
+
+[node name="collision" type="CollisionPolygon2D" parent="wall"]
+polygon = PoolVector2Array( -736, -352, -608, -352, -608, 0, -608, 160, -608, 416, -96, 416, -96, 160, 64, 160, 256, 160, 256, 384, 640, 384, 640, 0, 768, 0, 768, 352, 1408, 352, 1600, 352, 1600, -32, 1344, -32, 1344, -192, 1760, -192, 1760, 480, 128, 480, 128, 288, 32, 288, 32, 512, -736, 512 )
+
+[node name="polygon" type="Polygon2D" parent="wall"]
+color = Color( 0, 0, 0, 1 )
