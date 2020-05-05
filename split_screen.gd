@@ -16,6 +16,6 @@ func _ready():
 func _physics_process(delta):
 	#camera1.global_position = $viewport_container/vieport_1/Viewport/myWorld/Level/Alice.global_position
 	#camera2.global_position = $viewport_container/vieport_1/Viewport/myWorld/Level/Bob.global_position
-	camera1.position = $viewport_container/vieport_1/Viewport/myWorld/Level/Alice.position
-	camera2.position = $viewport_container/vieport_1/Viewport/myWorld/Level/Bob.position
+	camera1.global_position = $viewport_container/vieport_1/Viewport/myWorld/Alice/KinematicBody2D/Sprite.global_position
+	camera2.global_position = $viewport_container/vieport_1/Viewport/myWorld/Bob/KinematicBody2D/Sprite.global_position
 	
