@@ -1,0 +1,8 @@
+Comportamiento del enemigo
+Pasaje entre niveles
+Migración a Android
+Ajuste de pantalla y de controles
+Tiempo/puntaje
+Powerups cuánticos
+Switches/Puertas
+Walking Observers
