@@ -59,3 +59,4 @@ anims/Walk = SubResource( 3 )
 visible = false
 position = Vector2( 24.7417, 28.2022 )
 zoom = Vector2( 0.2, 0.2 )
+[connection signal="input_event" from="KinematicBody2D" to="KinematicBody2D" method="_on_KinematicBody2D_input_event"]

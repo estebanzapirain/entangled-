@@ -1,8 +1,10 @@
 Comportamiento del enemigo
+Muerte y reinicio
 Pasaje entre niveles
 Migración a Android
 Ajuste de pantalla y de controles
 Tiempo/puntaje
+GUI
 Powerups cuánticos
 Switches/Puertas
 Walking Observers

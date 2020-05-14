@@ -9,17 +9,17 @@ func get_input():
 	velocity = Vector2()
 	# cant move via keys if moving with the mouse
 	if moving_via_mouse == false:
-		if Input.is_action_pressed("right"):
+		if Input.is_action_pressed("left2") or Input.is_action_pressed("right1"):
 			velocity.x -= 1
-		if Input.is_action_pressed("left"):
+		if Input.is_action_pressed("right2") or Input.is_action_pressed("left1"):
 			velocity.x += 1
-		if Input.is_action_pressed("up"):
+		if Input.is_action_pressed("down2") or Input.is_action_pressed("up1"):
 			velocity.y += 1
-		if Input.is_action_pressed("down"):
+		if Input.is_action_pressed("up2") or Input.is_action_pressed("down1"):
 			velocity.y -= 1
-	if Input.is_mouse_button_pressed(BUTTON_LEFT):
-		target = get_global_mouse_position()
-		moving_via_mouse = true
+#	if Input.is_mouse_button_pressed(BUTTON_LEFT):
+#		target = get_global_mouse_position()
+#		moving_via_mouse = true
 	$AnimationPlayer.play("Walk");
 	
 func _physics_process(delta):
@@ -41,3 +41,9 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity)
 	velocity = Vector2.ZERO
 
+func analog_force_change(inForce, inAnalog):
+	if(inAnalog=="AliceAnalog"):
+		velocity.x = -inForce.x
+		velocity.y = +inForce.y
+	velocity = velocity.normalized() * speed
+	velocity = move_and_slide(velocity)

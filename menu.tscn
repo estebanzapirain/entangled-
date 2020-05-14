@@ -52,9 +52,9 @@ __meta__ = {
 }
 
 [node name="tituloLbl" type="Label" parent="."]
-margin_left = 55.7651
+margin_left = 117.566
 margin_top = 85.8532
-margin_right = 551.765
+margin_right = 613.566
 margin_bottom = 241.853
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.960784, 0.756863, 0.756863, 1 )
@@ -64,9 +64,9 @@ __meta__ = {
 }
 
 [node name="Panel" type="Panel" parent="."]
-margin_left = 140.0
+margin_left = 201.801
 margin_top = 276.0
-margin_right = 423.0
+margin_right = 484.801
 margin_bottom = 348.0
 __meta__ = {
 "_edit_use_anchors_": false
@@ -94,14 +94,14 @@ margin_bottom = 44.0
 text = "Iniciar Juego Nuevo"
 
 [node name="Alice" type="Sprite" parent="."]
-position = Vector2( 76, 321 )
+position = Vector2( 137.801, 321 )
 scale = Vector2( 10, 10 )
 texture = ExtResource( 3 )
 vframes = 4
 hframes = 4
 
 [node name="Bob" type="Sprite" parent="."]
-position = Vector2( 502, 325 )
+position = Vector2( 563.801, 325 )
 scale = Vector2( 10, 10 )
 texture = ExtResource( 2 )
 flip_h = true
@@ -110,9 +110,9 @@ hframes = 4
 frame = 3
 
 [node name="aliceLbl" type="Label" parent="."]
-margin_left = 38.0
+margin_left = 99.801
 margin_top = 394.0
-margin_right = 115.0
+margin_right = 176.801
 margin_bottom = 408.0
 text = "This is Alice"
 __meta__ = {
@@ -120,9 +120,9 @@ __meta__ = {
 }
 
 [node name="bobLbl" type="Label" parent="."]
-margin_left = 472.0
+margin_left = 533.801
 margin_top = 396.0
-margin_right = 542.0
+margin_right = 603.801
 margin_bottom = 410.0
 text = "This is Bob"
 __meta__ = {
