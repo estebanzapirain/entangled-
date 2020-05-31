@@ -22,4 +22,5 @@ func _on_Timer_timeout():
 	sprite.frame = frames_array[iFrame % 4];
 	raycast.cast_to.x = ray_array[iFrame % 4][0];
 	raycast.cast_to.y = ray_array[iFrame % 4][1];
-	print(raycast.get_collider());
+	if (raycast.get_collider().get_owner().name == "Alice" || raycast.get_collider().get_owner().name == "Bob"):
+		print("Murio");

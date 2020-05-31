@@ -1,44 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://bob.tscn" type="PackedScene" id=3]
-[ext_resource path="res://analog/analog.tscn" type="PackedScene" id=4]
 
 [node name="myWorld" type="Node2D"]
 
 [node name="Level" parent="." instance=ExtResource( 1 )]
 position = Vector2( 0.832169, 0.27739 )
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Control" type="Control" parent="CanvasLayer"]
-margin_right = 40.0
-margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Analog" parent="CanvasLayer/Control" instance=ExtResource( 4 )]
-position = Vector2( 96.8387, 365.676 )
-_listenerNodePath = "/root/split_screen/viewport_container/vieport_1/Viewport/myWorld/Alice/KinematicBody2D"
-_name = "AliceAnalog"
-
-[node name="Control2" type="Control" parent="CanvasLayer"]
-margin_right = 40.0
-margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Analog" parent="CanvasLayer/Control2" instance=ExtResource( 4 )]
-show_behind_parent = true
-position = Vector2( 603.168, 358.641 )
-_listenerNodePath = "/root/split_screen/viewport_container/vieport_1/Viewport/myWorld/Alice/KinematicBody2D"
-_name = "BobAnalog"
-
 [node name="Alice" parent="." instance=ExtResource( 2 )]
-position = Vector2( 51.8718, -13.3147 )
+position = Vector2( 51.8718, -14.3902 )
 
 [node name="Bob" parent="." instance=ExtResource( 3 )]
 position = Vector2( 235.781, 74.8951 )

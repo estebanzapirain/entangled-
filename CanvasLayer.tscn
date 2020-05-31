@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://analog/analog.tscn" type="PackedScene" id=2]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Analog" parent="Control" instance=ExtResource( 2 )]
+position = Vector2( 96.839, 365 )
+_listenerNodePath = "/root/split_screen/viewport_container/vieport_1/Viewport/myWorld/Alice/KinematicBody2D"
+_name = "AliceAnalog"
+
+[node name="Control2" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Analog" parent="Control2" instance=ExtResource( 2 )]
+show_behind_parent = true
+position = Vector2( 603.168, 365 )
+_listenerNodePath = "/root/split_screen/viewport_container/vieport_1/Viewport/myWorld/Alice/KinematicBody2D"
+_name = "BobAnalog"
