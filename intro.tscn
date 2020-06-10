@@ -1,26 +1,14 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://intro.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/Pixellari.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 28
+font_data = ExtResource( 2 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 42.0
-margin_top = 63.0
-margin_right = 571.0
-margin_bottom = 297.0
-custom_constants/line_separation = 5
-custom_constants/shadow_as_outline = 4
-text = "Historia
-Un científico del CERN experimentó con Alice y Bob, dos sujetos de prueba. Todas sus partículas fueron entrelazadas entre sí. El científico los mandó a extremos opuestos del mundo, confiado en que nunca se van a encontrar.
-El gobierno contrató una multitud de agentes, los Observers, para vigilar que Alice y Bob nunca se encuentren.
-Alice y Bob no saben por qué, pero sienten un vínculo con alguien más. Un día tienen un contacto por un instante, se ven (como en una visión, algo telepático) y deciden encontrarse. A medida que recorran su viaje irán descubriendo las razones de esas sensaciones y todo lo que han pasado y de lo que no tienen recuerdos.
-"
-scroll_following = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="continuarBtn" type="Button" parent="."]
 margin_left = 380.0
@@ -28,6 +16,24 @@ margin_top = 388.0
 margin_right = 570.0
 margin_bottom = 459.0
 text = "Continuar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 1.0
+margin_top = 2.0
+margin_right = 720.0
+margin_bottom = 331.0
+custom_fonts/font = SubResource( 1 )
+text = "Two qubits, both alike in state,
+in fair Geneva, where we lay our scene,
+bonded tightly from the beginning,
+then ripped apart from each other's arms,
+sent far away, away from their reach.
+This is their story."
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
