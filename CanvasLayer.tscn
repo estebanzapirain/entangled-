@@ -1,6 +1,12 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
+[ext_resource path="res://assets/fonts/Pixellari.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://analog/analog.tscn" type="PackedScene" id=2]
+[ext_resource path="res://time.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 38
+font_data = ExtResource( 1 )
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -28,3 +34,14 @@ show_behind_parent = true
 position = Vector2( 603.168, 365 )
 _listenerNodePath = "/root/split_screen/viewport_container/vieport_1/Viewport/myWorld/Alice/KinematicBody2D"
 _name = "BobAnalog"
+
+[node name="time" type="Label" parent="."]
+margin_left = 44.4149
+margin_top = 24.058
+margin_right = 84.4149
+margin_bottom = 63.058
+custom_fonts/font = SubResource( 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
