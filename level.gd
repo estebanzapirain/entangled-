@@ -18,21 +18,24 @@ func _ready():
 	
 func _process(delta):
 	time_label.text = "Time Left: "+str(stepify(timer.time_left,0.1))+" secs"
-	
+
+#Un personaje fue observado
 func player_observed(character):
 	print(character," was observed")
-	players_stop()
+	players_stop() #se frenan los personajes. Esto es para los controles touch
 	#TODO: ir a una escena de muerte, y después recargar la escena
-	get_tree().reload_current_scene()
+	get_tree().reload_current_scene() #reinicia el nivel
 
+#Un personaje cruzó la salida
 func _on_Exit_body_entered(body):
 	print(body.get_owner().name," Got to the Exit");
-	get_parent().go_to_next_level()
+	get_parent().go_to_next_level() #va al script de world.gd
 
+#Se terminó el tiempo
 func _on_Timer_timeout():
 	print("Time Out")
 	#TODO: ir a una escena de muerte, y después recargar la escena
-	get_tree().reload_current_scene()
+	get_tree().reload_current_scene() #reinicia el nivel
 
 func players_stop():
 	Input.action_release("right1");
