@@ -17,7 +17,12 @@ func _ready():
 
 
 func _on_AliceLev1_pressed():
-	get_tree().change_scene("level1.tscn")
-
+	Metricas.current_level = 1
+	Metricas.level_path = "res://level1.tscn"
+	get_tree().change_scene("split_screen.tscn")
+	
 func _on_AliceLev2_pressed():
-	get_tree().change_scene("level2.tscn")
+	Metricas.current_level = 2
+	Metricas.level_path = "res://level2.tscn"
+	get_tree().change_scene("split_screen.tscn")
+	
