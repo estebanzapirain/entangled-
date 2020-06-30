@@ -8,7 +8,7 @@ onready var camera2 = $viewport_container/vieport_2/Viewport/Camera2D
 
 func _ready():
 	viewport2.world_2d = viewport1.world_2d
-	
+	#cargar el nivel correspondiente basado en el valor de autoload
 	pass
 
 
@@ -16,6 +16,6 @@ func _ready():
 func _physics_process(delta):
 	#camera1.global_position = $viewport_container/vieport_1/Viewport/myWorld/Level/Alice.global_position
 	#camera2.global_position = $viewport_container/vieport_1/Viewport/myWorld/Level/Bob.global_position
-	camera1.global_position = $viewport_container/vieport_1/Viewport/myWorld/Alice/KinematicBody2D/Sprite.global_position
-	camera2.global_position = $viewport_container/vieport_1/Viewport/myWorld/Bob/KinematicBody2D/Sprite.global_position
+	camera1.global_position = $viewport_container/vieport_1/Viewport/myWorld/Level/Alice/KinematicBody2D/Sprite.global_position
+	camera2.global_position = $viewport_container/vieport_1/Viewport/myWorld/Level/Bob/KinematicBody2D/Sprite.global_position
 	

@@ -22,6 +22,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Autoload="*res://autoload.gd"
+Metricas="*res://metricas.gd"
 
 [display]
 

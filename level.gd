@@ -1,9 +1,9 @@
 extends Node2D
 
-onready var alice = get_parent().get_node("Alice")
-onready var bob = get_parent().get_node("Bob")
-onready var alice_script = get_parent().get_node("Alice/KinematicBody2D")
-onready var bob_script = get_parent().get_node("Bob/KinematicBody2D")
+onready var alice = get_node("Alice")
+onready var bob = get_node("Bob")
+onready var alice_script = get_node("Alice/KinematicBody2D")
+onready var bob_script = get_node("Bob/KinematicBody2D")
 onready var observer = get_node("Enemies/Observer/KinematicBody2D")
 onready var observer2 = get_node("Enemies/Observer2/KinematicBody2D")
 onready var timer = get_node("Timer")
@@ -29,7 +29,11 @@ func player_observed(character):
 #Un personaje cruzó la salida
 func _on_Exit_body_entered(body):
 	print(body.get_owner().name," Got to the Exit");
-	get_parent().go_to_next_level() #va al script de world.gd
+#	get_parent().go_to_next_level() #va al script de world.gd
+	if (Metricas.current_level > Metricas.last_level):
+		Metricas.last_level = Metricas.current_level;
+		Metricas.completed[Metricas.current_level]=body.get_owner().name
+	get_tree().change_scene("level_select.tscn")
 
 #Se terminó el tiempo
 func _on_Timer_timeout():
