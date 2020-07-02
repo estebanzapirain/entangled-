@@ -203,3 +203,5 @@ __meta__ = {
 }
 [connection signal="pressed" from="Control/AliceLev1" to="." method="_on_AliceLev1_pressed"]
 [connection signal="pressed" from="Control/AliceLev2" to="." method="_on_AliceLev2_pressed"]
+[connection signal="pressed" from="Control/AliceLev3" to="." method="_on_AliceLev3_pressed"]
+[connection signal="pressed" from="Control/FinalLevel" to="." method="_on_FinalLevel_pressed"]

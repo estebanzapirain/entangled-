@@ -17,6 +17,6 @@ func _on_continuarBtn_pressed():
 		print(story_step)
 		label.text = story_steps[story_step]
 	else:
-		get_tree().change_scene("res://split_screen.tscn") #ir al world original
+		get_tree().change_scene("res://level_select.tscn") #ir al world original
 
 
