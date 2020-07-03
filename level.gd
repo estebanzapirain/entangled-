@@ -17,14 +17,15 @@ func _ready():
 	observer2.connect("was_observed",self,"player_observed")
 	
 func _process(delta):
-	time_label.text = "Time Left: "+str(stepify(timer.time_left,0.1))+" secs"
+	time_label.text = "Time until Decoherence: "+str(stepify(timer.time_left,0.1))+" msecs"
 
 #Un personaje fue observado
 func player_observed(character):
 	print(character," was observed")
-	players_stop() #se frenan los personajes. Esto es para los controles touch
+	get_tree().change_scene("res://level_select.tscn") #ir al world original
+#	players_stop() #se frenan los personajes. Esto es para los controles touch
 	#TODO: ir a una escena de muerte, y después recargar la escena
-	get_tree().reload_current_scene() #reinicia el nivel
+#	get_tree().reload_current_scene() #reinicia el nivel
 
 #Un personaje cruzó la salida
 func _on_Exit_body_entered(body):
@@ -39,7 +40,7 @@ func _on_Exit_body_entered(body):
 func _on_Timer_timeout():
 	print("Time Out")
 	#TODO: ir a una escena de muerte, y después recargar la escena
-	get_tree().reload_current_scene() #reinicia el nivel
+	get_tree().change_scene("level_select.tscn")
 
 func players_stop():
 	Input.action_release("right1");

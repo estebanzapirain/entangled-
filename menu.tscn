@@ -84,14 +84,13 @@ __meta__ = {
 [node name="continuarBtn" type="Button" parent="Panel/VBoxContainer"]
 margin_right = 257.0
 margin_bottom = 20.0
-disabled = true
-text = "Continuar Juego"
+text = "Watch Intro"
 
 [node name="nuevoBtn" type="Button" parent="Panel/VBoxContainer"]
 margin_top = 24.0
 margin_right = 257.0
 margin_bottom = 44.0
-text = "Iniciar Juego Nuevo"
+text = "Play!!!"
 
 [node name="Alice" type="Sprite" parent="."]
 position = Vector2( 137.801, 321 )
@@ -134,4 +133,5 @@ anims/aliceWalk = SubResource( 2 )
 
 [node name="bobAnimPlayer" type="AnimationPlayer" parent="."]
 anims/bobWalk = SubResource( 3 )
+[connection signal="pressed" from="Panel/VBoxContainer/continuarBtn" to="." method="_on_continuarBtn_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/nuevoBtn" to="." method="_on_nuevoBtn_pressed"]

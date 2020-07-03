@@ -149,7 +149,7 @@ position = Vector2( 182.958, 36.1954 )
 shape = SubResource( 5 )
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 5.0
 autostart = true
 
 [node name="Enemies" type="Node" parent="."]

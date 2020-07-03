@@ -17,4 +17,8 @@ func _ready():
 
 
 func _on_nuevoBtn_pressed():
-	get_tree().change_scene("intro.tscn")
+	get_tree().change_scene("level_select.tscn")
+
+
+func _on_continuarBtn_pressed():
+	get_tree().change_scene("res://intro.tscn")
