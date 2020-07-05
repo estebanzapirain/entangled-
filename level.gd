@@ -21,27 +21,25 @@ func _process(delta):
 
 #Un personaje fue observado
 func player_observed(character):
-	print(character," was observed")
-	get_tree().change_scene("res://level_select.tscn") #ir al world original
+	Autoload.message = character + " was observed"
+	get_tree().change_scene("ad_screen.tscn")
 	players_stop() #se frenan los personajes. Esto es para los controles touch
 	#TODO: ir a una escena de muerte, y después recargar la escena
-#	get_tree().reload_current_scene() #reinicia el nivel
+
 
 #Un personaje cruzó la salida
 func _on_Exit_body_entered(body):
-	print(body.get_owner().name," Got to the Exit");
-#	get_parent().go_to_next_level() #va al script de world.gd
 	if (Metricas.current_level > Metricas.last_level):
 		Metricas.last_level = Metricas.current_level;
 		Metricas.completed[Metricas.current_level]=body.get_owner().name
-	get_tree().change_scene("level_select.tscn")
+	Autoload.message = body.get_owner().name + " Got to the Exit"
+	get_tree().change_scene("ad_screen.tscn")
 	players_stop() #se frenan los personajes. Esto es para los controles touch
 
 #Se terminó el tiempo
 func _on_Timer_timeout():
-	print("Time Out")
-	#TODO: ir a una escena de muerte, y después recargar la escena
-	get_tree().change_scene("level_select.tscn")
+	Autoload.message = "Coherence Time is over! Quantum system is collapsed"
+	get_tree().change_scene("ad_screen.tscn")
 	players_stop() #se frenan los personajes. Esto es para los controles touch
 
 func players_stop():
