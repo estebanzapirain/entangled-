@@ -27,10 +27,10 @@ func _ready():
 	halfSize = bg.texture.get_size() /2;
 	squaredHalfSizeLenght = halfSize.x*halfSize.y;
 	
-	if (_listenerNodePath != "" && _listenerNodePath!=null):
-		_listenerNodePath = get_node(_listenerNodePath)
-	elif _listenerNodePath=="":
-		_listenerNodePath = null
+#	if (_listenerNodePath != "" && _listenerNodePath!=null):
+#		_listenerNodePath = get_node(_listenerNodePath)
+#	elif _listenerNodePath=="":
+#		_listenerNodePath = null
 
 	_isDynamicallyShowing = _isDynamicallyShowing and parent is Control
 	if _isDynamicallyShowing:
@@ -143,8 +143,12 @@ func isReleased(event):
 	elif event is InputEventMouseButton:
 		return !event.pressed
 	
-func update_listnerNode():
-	if (_listenerNodePath != "" && _listenerNodePath!=null):
-		_listenerNodePath = get_node(_listenerNodePath)
-	elif _listenerNodePath=="":
-		_listenerNodePath = null
+#func update_listnerNode():
+#	if (_listenerNodePath != "" && _listenerNodePath!=null):
+#		_listenerNodePath = get_node(_listenerNodePath)
+#	elif _listenerNodePath=="":
+#		_listenerNodePath = null
+
+func set_listener(ruta):
+	_listenerNodePath = get_node(ruta)
+	print(_listenerNodePath.get_parent().name)

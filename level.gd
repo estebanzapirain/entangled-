@@ -23,7 +23,7 @@ func _process(delta):
 func player_observed(character):
 	print(character," was observed")
 	get_tree().change_scene("res://level_select.tscn") #ir al world original
-#	players_stop() #se frenan los personajes. Esto es para los controles touch
+	players_stop() #se frenan los personajes. Esto es para los controles touch
 	#TODO: ir a una escena de muerte, y después recargar la escena
 #	get_tree().reload_current_scene() #reinicia el nivel
 
@@ -35,12 +35,14 @@ func _on_Exit_body_entered(body):
 		Metricas.last_level = Metricas.current_level;
 		Metricas.completed[Metricas.current_level]=body.get_owner().name
 	get_tree().change_scene("level_select.tscn")
+	players_stop() #se frenan los personajes. Esto es para los controles touch
 
 #Se terminó el tiempo
 func _on_Timer_timeout():
 	print("Time Out")
 	#TODO: ir a una escena de muerte, y después recargar la escena
 	get_tree().change_scene("level_select.tscn")
+	players_stop() #se frenan los personajes. Esto es para los controles touch
 
 func players_stop():
 	Input.action_release("right1");
