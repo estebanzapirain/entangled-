@@ -36,3 +36,8 @@ func _on_FinalLevel_pressed():
 	Metricas.current_level = 99
 	Metricas.level_path = "res://level_final.tscn"
 	get_tree().change_scene("split_screen.tscn")
+
+
+func _on_Level0_pressed():
+	Metricas.level_path = "res://level0.tscn"
+	get_tree().change_scene("split_screen.tscn")

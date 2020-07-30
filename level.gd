@@ -4,21 +4,16 @@ onready var alice = get_node("Alice")
 onready var bob = get_node("Bob")
 onready var alice_script = get_node("Alice/KinematicBody2D")
 onready var bob_script = get_node("Bob/KinematicBody2D")
-onready var observer = get_node("Enemies/Observer/KinematicBody2D")
-onready var observer2 = get_node("Enemies/Observer2/KinematicBody2D")
-onready var timer = get_node("Timer")
+#onready var timer = get_node("Timer")
 #onready var time_label = get_node("time")
 onready var time_label = get_parent().get_parent().get_parent().get_parent().get_parent().get_node("CanvasLayer/time")
 
 func _ready():
-#	alice.position = Autoload.AliceStartPos[Autoload.level]
-#	bob.position = Autoload.BobStartPos[Autoload.level]
-	observer.connect("was_observed",self,"player_observed")
-	observer2.connect("was_observed",self,"player_observed")
-	
+	pass	
 func _process(delta):
-	time_label.text = "Time until Decoherence: "+str(stepify(timer.time_left,0.1))+" msecs"
-
+#	time_label.text = "Time until Decoherence: "+str(stepify(timer.time_left,0.1))+" msecs"
+	pass
+	
 #Un personaje fue observado
 func player_observed(character):
 	Autoload.message = character + " was observed"

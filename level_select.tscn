@@ -36,6 +36,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Level0" type="TextureButton" parent="Control"]
+anchor_left = 0.028
+anchor_top = 0.115
+anchor_right = 0.028
+anchor_bottom = 0.115
+margin_left = 599.134
+margin_top = 274.121
+margin_right = 706.133
+margin_bottom = 341.121
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="BobLev1" type="TextureButton" parent="Control"]
 anchor_left = 0.028
 anchor_top = 0.115
@@ -202,6 +218,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="pressed" from="Control/AliceLev1" to="." method="_on_AliceLev1_pressed"]
+[connection signal="pressed" from="Control/Level0" to="." method="_on_Level0_pressed"]
 [connection signal="pressed" from="Control/BobLev1" to="." method="_on_AliceLev1_pressed"]
 [connection signal="pressed" from="Control/BobLev2" to="." method="_on_AliceLev2_pressed"]
 [connection signal="pressed" from="Control/AliceLev2" to="." method="_on_AliceLev2_pressed"]
