@@ -1,6 +1,6 @@
 extends Node2D
 
-export var id = 1
+export var id = 0
 export var mode = 0 #0=button 1=switch
 
 signal was_stepped(switch)
@@ -16,6 +16,6 @@ func _on_Area2D_body_entered(body):
 
 
 func _on_Area2D_body_exited(body):
-	if ((body.get_owner().name == "Alice") || (body.get_owner().name == "Bob") && (mode == 0) ):
+	if (((body.get_owner().name == "Alice") || (body.get_owner().name == "Bob")) && (mode == 0) ):
 		emit_signal("was_exited",id)
 		tilemap.set_cell(0,0,0)
