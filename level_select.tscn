@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/Levelgreen-min.png" type="Texture" id=1]
 [ext_resource path="res://assets/world-map-306338.png" type="Texture" id=2]
 [ext_resource path="res://assets/Levelreoundred-min.png" type="Texture" id=3]
 [ext_resource path="res://level_select.gd" type="Script" id=4]
+[ext_resource path="res://assets/Levelgray-min.png" type="Texture" id=5]
 
 [node name="Level Select" type="Node2D"]
 script = ExtResource( 4 )
@@ -29,6 +30,7 @@ margin_left = 83.2285
 margin_top = 367.778
 margin_right = 190.228
 margin_bottom = 434.778
+toggle_mode = true
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 1 )
 expand = true
@@ -79,6 +81,7 @@ margin_right = 628.337
 margin_bottom = 107.811
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 1 )
+texture_disabled = ExtResource( 5 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -95,6 +98,7 @@ margin_right = 227.707
 margin_bottom = 304.25
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 1 )
+texture_disabled = ExtResource( 5 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -111,6 +115,7 @@ margin_right = 328.511
 margin_bottom = 235.755
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 1 )
+texture_disabled = ExtResource( 5 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -127,6 +132,7 @@ margin_right = 539.165
 margin_bottom = 175.014
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 1 )
+texture_disabled = ExtResource( 5 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -143,6 +149,7 @@ margin_right = 389.251
 margin_bottom = 88.4261
 texture_normal = ExtResource( 3 )
 texture_pressed = ExtResource( 1 )
+texture_disabled = ExtResource( 5 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
