@@ -15,6 +15,7 @@ func _ready():
 		observer.connect("was_observed",self,"player_observed")
 	if (has_node("Enemies/Observer2")):
 		observer2.connect("was_observed",self,"player_observed")
+
 func _process(delta):
 	time_label.text = "Time until Decoherence: "+str(stepify(timer.time_left,0.1))+" msecs"
 	pass
@@ -34,10 +35,15 @@ func _on_Exit_body_entered(body):
 	Saves.level_completed.character = character
 	Metricas.save_level_completed()
 	Metricas.last_level = Metricas.current_level;
-	if (((character=="Bob") && (Metricas.completed[Metricas.current_level]=="Alice")) || ((character=="Bob") && (Metricas.completed[Metricas.current_level]=="Alice"))):
+	print("Metricas: " + Metricas.completed[Metricas.current_level])
+	print("Personaje: " + character)
+	var cond1 = ((character=="Alice") && ((Metricas.completed[Metricas.current_level]=="Bob") || (Metricas.completed[Metricas.current_level]=="Both")))
+	var cond2 = (((character=="Bob") && ((Metricas.completed[Metricas.current_level]=="Alice")) || (Metricas.completed[Metricas.current_level]=="Both")))
+	if ( cond1 || cond2):
 		Metricas.completed[Metricas.current_level]="Both"
 	else:
 		Metricas.completed[Metricas.current_level]=character
+	print("Metricas despues: " + Metricas.completed[Metricas.current_level])
 	Autoload.message = character + " Got to the Exit"
 	get_tree().change_scene("ad_screen.tscn")
 	players_stop() #se frenan los personajes. Esto es para los controles touch
