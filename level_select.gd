@@ -10,16 +10,17 @@ onready var bobLev3 = get_node("Control/BobLev3")
 onready var finalLevel = get_node("Control/FinalLevel")
 
 func _ready(): #control de qué niveles están habilitados
-	if (Metricas.completed[3]=="No"):
-		finalLevel.disabled = true
-	if (Metricas.completed[2]!="Bob"):
-		bobLev3.disabled = true
-	if (Metricas.completed[2]!="Alice"):
-		aliceLev3.disabled = true
-	if (Metricas.completed[1]!="Bob"):
-		bobLev2.disabled = true
-	if (Metricas.completed[1]!="Alice"):
-		aliceLev2.disabled = true
+	if ((Metricas.completed[1] == "Bob") || (Metricas.completed[1] == "Both")):
+		bobLev2.disabled = false
+	if ((Metricas.completed[1] == "Alice") || (Metricas.completed[1] == "Both")):
+		aliceLev2.disabled = false
+	if ((Metricas.completed[2] == "Bob") || (Metricas.completed[2] == "Both")):
+		bobLev3.disabled = false
+	if ((Metricas.completed[2] == "Alice") || (Metricas.completed[2] == "Both")):
+		aliceLev3.disabled = false
+	if ((Metricas.completed[3] == "Both")):
+		finalLevel.disabled = false
+
 		
 func _on_AliceLev1_pressed():
 	Metricas.current_level = 1

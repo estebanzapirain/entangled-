@@ -1,9 +1,5 @@
 extends KinematicBody2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 var frames_array = [0,8,4,12]; # número de frame para la rotación, en la textura del Sprite observer
 var ray_array = [[0,1000],[1000,0],[0, -1000],[-1000,0]]; #dirección (x,y) del RayCast acompañando la rotación
 var iFrame = 0;
@@ -14,7 +10,6 @@ onready var raycast = get_node("RayCast2D");
 
 signal was_observed(character)
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	timer.set_wait_time(wait_time);
 	timer.start();
@@ -28,6 +23,7 @@ func _on_Timer_timeout():
 
 func _process(delta):
 	if (raycast.get_collider().get_owner().name == "Alice"):
+		print("Alice was observed")
 		emit_signal("was_observed","Alice")
 	if (raycast.get_collider().get_owner().name == "Bob"):
 		emit_signal("was_observed","Bob")
