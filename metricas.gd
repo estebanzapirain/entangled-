@@ -2,7 +2,7 @@ extends Node
 
 onready var current_level = 1
 onready var last_level = 1
-onready var completed = {1:"No",2:"No",3:"No"}
+onready var completed = {1:"No",2:"No",3:"No",99:"No"}
 onready var level_path = "res://level1.tscn"
 
 #func _ready():
