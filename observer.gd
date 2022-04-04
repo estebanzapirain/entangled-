@@ -22,7 +22,7 @@ func _on_Timer_timeout():
 
 
 func _process(delta):
-	if (raycast.get_collider().get_owner().name == "Alice"):
+	if ((raycast.get_collider() != null) && (raycast.get_collider().get_owner().name == "Alice")):
 		emit_signal("was_observed","Alice")
-	if (raycast.get_collider().get_owner().name == "Bob"):
+	if ((raycast.get_collider() != null) && (raycast.get_collider().get_owner().name == "Bob")):
 		emit_signal("was_observed","Bob")
